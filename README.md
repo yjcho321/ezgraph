@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This app generates a simple line graph from multiple .xlsx files added by the user. The data from the files are extracted based on the predefined templates which can be created, modified by the user on the front page.
 
+The app is deployed using Github Pages [here](https://yjcho321.github.io/ezgraph/).
+
 ## Available Scripts
 
 In the project directory, you can run:
