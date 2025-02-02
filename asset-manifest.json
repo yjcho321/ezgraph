@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ezgraph/static/css/main.3272ad3e.css",
+    "main.js": "/ezgraph/static/js/main.ae6c8f1e.js",
+    "static/js/453.7ad1510a.chunk.js": "/ezgraph/static/js/453.7ad1510a.chunk.js",
+    "index.html": "/ezgraph/index.html",
+    "main.3272ad3e.css.map": "/ezgraph/static/css/main.3272ad3e.css.map",
+    "main.ae6c8f1e.js.map": "/ezgraph/static/js/main.ae6c8f1e.js.map",
+    "453.7ad1510a.chunk.js.map": "/ezgraph/static/js/453.7ad1510a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3272ad3e.css",
+    "static/js/main.ae6c8f1e.js"
+  ]
+}
