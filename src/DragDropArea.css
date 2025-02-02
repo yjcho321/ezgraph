@@ -1,0 +1,36 @@
+.file {
+  display: none;
+}
+
+.preview {
+  width: 200px;
+  height: 80px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.preview:hover {
+  border: 1px solid #70b5ff;
+  background-color: #70b5ff;
+}
+
+.preview_drag {
+  border: 1px solid #70b5ff;
+  background-color: #70b5ff;
+}
+
+
+.preview_msg {
+  font-weight: 400;
+  font-size: .8em;
+  margin: 10px 0 5px;
+  text-align: center;
+}

@@ -1,0 +1,172 @@
+/* Container for the front page */
+.front-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #4a90e2, #5c67b1);
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Title and subtitle styles */
+.front-page-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.front-page-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Template lists container */
+.front-page-template-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px; /* Adjust the width as needed */
+  margin-top: 30px;
+}
+
+/* Section for templates (predefined and custom) */
+.front-page-template-section {
+  width: 48%; /* Each section takes up 48% of the available space */
+}
+
+/* Template list (predefined and custom) */
+.front-page-template-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between each template */
+  max-height: 60vh; /* Adjust the height as needed */
+  overflow-y: auto; /* Adds a vertical scrollbar if the content overflows */
+  padding-right: 10px; /* Prevent scrollbar from covering content */
+}
+
+/* Optional: You can style the scrollbar to make it look nicer (for Webkit browsers) */
+.front-page-template-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.front-page-template-list::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.front-page-template-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+.front-page-template-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex; /* Use flexbox to align items */
+  justify-content: flex-end; /* Space between content and action buttons */
+  align-items: stretch; /* Vertically center content */
+  transition: background-color 0.3s ease;
+}
+
+.front-page-template-item:hover {
+  background-color: #ddd;
+}
+
+.template-name {
+  font-size: 1.1rem;
+  margin-block-start: 1em;
+  margin-block-end: .3em;
+  font-weight: bold;
+  color: #333;
+}
+
+.template-description {
+  font-size: 0.9rem;
+  margin-block-start: .3em;
+  margin-block-end: 1em;
+  color: #666;
+}
+
+/* Button for adding a new custom template */
+.template-add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff9800; /* Vibrant orange color for better contrast */
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.template-add-button:hover {
+  background-color: #f57c00; /* Darker orange on hover */
+}
+
+.template-add-button-text {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+.template-add-button svg {
+  color: white;
+}
+
+
+/* Content section (name and description) */
+.template-item-content {
+  display: flex;
+  margin: 5px 15px 5px 15px;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0px; /* Space between name and description */
+  max-width: 100%; /* Prevent content from growing too wide */
+}
+
+/* Container for the Edit and Delete buttons */
+.template-item-actions {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  /* align-items: stretch; */
+  
+}
+
+/* Edit Button */
+.template-edit-button,
+.template-delete-button {
+  background-color: transparent; /* Transparent background */
+  color: #666; /* Inherit color for the icons */
+  border: none;
+  padding: 0px 12px;
+  cursor: pointer;
+  font-size: 1.2rem; /* Adjust size for better visual balance */
+  transition: color 0.3s ease;
+  height: 100%;
+}
+.template-edit-button:focus,
+.template-delete-button:focus {
+  outline: none;
+}
+
+.template-edit-button:hover {
+  color: #222;
+  background-color: #ccc; /* Transparent background */  
+}
+
+.template-delete-button:hover {
+  color: #d32626;
+  background-color: #ccc;
+}
+
+.template-rightmost-button:hover {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

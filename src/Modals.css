@@ -1,0 +1,376 @@
+/* Modals.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.default-modal {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center modal */
+  background: white;
+  border-radius: 5px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
+  /* Subtle shadow */
+  animation: fadeIn .2s ease-in;
+  /* Fade-in animation */
+  outline: none;
+}
+
+
+.modal-header {
+  font-size: 1.5em;
+  padding: 0px 20px;
+  margin-bottom: 30px;
+  color: #343a40;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0px 20px;
+  font-size: 1em;
+  color: #6c757d;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 5px;
+  /* Width of the scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #e9ecef;
+  /* Track color */
+  border-radius: 10px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Scrollbar thumb color */
+  border-radius: 30px;
+  transition: background .5s ease;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+  /* Darker color when hovering */
+}
+
+.modal-content::-webkit-scrollbar-thumb:active {
+  background: #ccc;
+  /* Even darker color when active */
+}
+
+.modal-footer {
+  display: flex;
+  padding: 20px;
+  margin: 30px 0 0 0;
+  border-radius: 5px;
+  background: #eeeeee;
+  justify-content: center;
+}
+
+/* FileImportModal */
+.file-import-modal {
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+}
+
+/* confirm-modal */
+.confirm-modal {
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Rename Modal */
+.rename-modal {
+  max-width: 600px;
+  width: 100%;
+}
+
+
+/* Template Modal */
+.template-modal {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 90vw;
+  max-height: 90vh;
+  /* Limit modal height to viewport height */
+}
+
+
+.file-rename-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  font-size: 1em;
+  margin-bottom: 5px;
+  /* Space between text field and progress */
+  box-sizing: border-box;
+  /* Ensure padding is included in the width */
+}
+
+.file-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.file-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  /* Center items vertically */
+  /* margin-bottom: 5px; Space between file items */
+  margin-right: 5px;
+}
+
+.icon-container {
+  margin-right: 10px;
+  /* Space between icon and text field */
+  display: flex;
+  align-items: center;
+  /* Center the icon vertically */
+}
+
+.file-info {
+  flex: 1;
+  /* Allow the file-info container to take up remaining space */
+  display: flex;
+  flex-direction: column;
+  /* Stack text field and progress vertically */
+}
+
+.file-name-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  font-size: 1em;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.file-name-input::placeholder {
+  color: #888;
+  /* Gray color for placeholder text */
+}
+
+.file-message {
+  color: #666;
+  font-size: 0.875em;
+  /* Slightly smaller font size for progress text */
+}
+
+.file-icon {
+  font-size: 1.5em;
+  /* Adjust the size of the icon */
+}
+
+.file-icon.success {
+  color: #4CAF50;
+  /* Green for success */
+}
+
+.file-icon.loading {
+  color: #666;
+  /* Gray for loading */
+}
+
+.file-icon.error {
+  color: #d32626;
+  /* Red for error */
+}
+
+
+
+/* buttons 1 */
+/* buttons */
+.modal-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  width: 100px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.confirm-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.confirm-button:hover {
+  background-color: #0066ee;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid #cccccc;
+}
+
+.cancel-button:hover {
+  background-color: #dddddd;
+}
+
+.modal-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* FORMS */
+
+/* Form styling */
+.template-modal-form {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.template-item-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.template-item-container-2row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.template-modal-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 0px 2px;
+  font-size: 1em;
+}
+
+.template-modal-input:focus {
+  outline: none;
+  border-color: #333; /* Change border color on focus */
+}
+.template-modal-input::placeholder {
+  color: #aaa;
+}
+
+.template-modal-input.template-modal-input-100 {
+  width: 100px;
+}
+.template-modal-input.template-modal-input-150 {
+  width: 150px;
+}
+.template-modal-input.template-modal-input-300 {
+  width: 297px;
+}
+
+.template-modal-input.template-modal-input-grow {
+  width: 150px;
+  flex-grow: 1;
+}
+
+
+.template-modal-section {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  margin-right: 5px;
+  box-sizing: border-box;
+}
+
+.template-modal-section-heading {
+  margin: 10px 0px;
+}
+
+.template-container-add-button {
+  display: flex;
+  margin: 10px 30%;
+
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.template-container-add-button:hover {
+  background-color: #0066ee;
+}
+
+.template-container-add-button-text {
+  margin-left: 10px;
+  font-size: 1em;
+}
+
+.template-container-add-button svg {
+  color: white;
+}
+
+
+
+.template-container-delete-button {
+  background-color: transparent;
+  color: #666;
+  padding: 0px 15px;
+  margin: 0px 2px 0px 5px;  
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+}
+
+.template-container-delete-button:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.template-container-delete-button:hover {
+  color: #d32626;
+  background-color: #ccc;
+}
